@@ -1,0 +1,162 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    border-bottom: 1px solid #444242;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between; /* Space between start and end items */
+    align-items: center;
+}
+
+.navbar-start {
+    width: 100%; /* Pastikan elemen ini memenuhi lebar penuh */
+    display: flex;
+    justify-content: center; /* Untuk menaruh elemen di tengah */
+}
+
+.navbar-end {
+    margin-right: 5rem;
+}
+
+.navbar-end i {
+    font-size: 20px; /* Ukuran ikon */
+  }
+  
+  .navbar-end a {
+    margin-left: 15px; /* Jarak antar ikon */
+  }
+  
+  .navbar-end i:hover {
+    font-size: 25px; /* Ukuran saat hover */
+    color: #000000; /* Warna ikon saat hover */
+    transition: 0.3s; /* Animasi transisi saat hover */
+  }
+
+  .navbar-burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.navbar-burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #444242;
+    transition: all 0.3s ease;
+}
+ 
+.hero {
+    padding: 5rem;
+    border-bottom: C;
+
+}
+.hero .title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.hero .button {
+    margin: 0.5rem;
+}
+
+.container .title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+section {
+    border-bottom: 1px solid #444242 ;
+}
+
+/* Mengatur ukuran gambar agar sama */
+.box img {
+    width: 100%; /* Gambar akan menyesuaikan ukuran box */
+    height: 250px; /* Menetapkan tinggi tetap untuk gambar */
+    object-fit: cover; /* Memastikan gambar menyesuaikan rasio tanpa terdistorsi */
+    transition: transform 0.3s ease-in-out; /* Menambahkan transisi untuk animasi */
+  }
+  
+  /* Animasi sederhana saat di-hover */
+  img:hover {
+    transform: scale(1.1); /* Membesarkan gambar sedikit saat di-hover */
+  }
+
+  .button.is-primary {
+    background-color: #444242;
+  }
+  
+  /* Style untuk tombol agar lebih menarik saat di-hover */
+  .button.is-primary:hover {
+    background-color: #707273; /* Mengubah warna tombol saat di-hover */
+    transform: translateY(-2px); /* Memberikan sedikit efek terangkat */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .footer {
+    padding: 20px 0; /* Padding atas dan bawah */
+    text-align: center; /* Teks di tengah */
+  }
+  
+  .footer p {
+    margin: 0; /* Menghapus margin default pada <p> */
+    font-size: 16px; /* Ukuran font */
+  }
+  
+  .footer a {
+    color: #ecf0f1; /* Warna link */
+    text-decoration: none; /* Menghapus garis bawah */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; /* Garis bawah pada hover */
+    color: #3498db; /* Warna link saat hover */
+  }
+
+  /* Media queries untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Sembunyikan menu pada layar kecil */
+        flex-direction: column; /* Menu vertikal */
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Posisi dropdown di bawah navbar */
+        left: 0;
+        z-index: 1000;
+        padding: 1rem;
+    }
+
+    .navbar-menu.is-active {
+        display: flex; /* Tampilkan menu saat burger di-klik */
+    }
+
+    .navbar-end {
+        margin: 0; /* Hapus margin pada layar kecil */
+        padding: 0;
+    }
+
+    .navbar-burger {
+        display: flex; /* Tampilkan burger menu */
+    }
+}
+  
